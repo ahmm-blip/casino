@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bckrh32tfpoos"]
+
+[ext_resource type="Texture2D" uid="uid://c4ic6gyv5wc8v" path="res://lever.png" id="1_56inr"]
+[ext_resource type="PackedScene" uid="uid://cgvqevda6ba4w" path="res://mainscene.tscn" id="2_aft51"]
+
+[node name="Lever" type="Sprite2D"]
+position = Vector2(584, 239)
+scale = Vector2(0.425654, 0.425654)
+texture = ExtResource("1_56inr")
+
+[node name="Node2D" parent="." instance=ExtResource("2_aft51")]

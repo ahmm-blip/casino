@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgvqevda6ba4w"]
+
+[ext_resource type="Texture2D" uid="uid://wnined7h60sd" path="res://machine.png" id="1_qa3sc"]
+[ext_resource type="Texture2D" uid="uid://c4ic6gyv5wc8v" path="res://lever.png" id="2_3dmea"]
+[ext_resource type="Script" path="res://Lever.cs" id="3_i6npy"]
+[ext_resource type="PackedScene" uid="uid://ct1a5xs27b8b7" path="res://UI.tscn" id="4_muyas"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Machine" type="Sprite2D" parent="."]
+position = Vector2(333, 338)
+texture = ExtResource("1_qa3sc")
+
+[node name="Lever" type="Sprite2D" parent="."]
+position = Vector2(586, 217)
+scale = Vector2(0.52451, 0.52451)
+texture = ExtResource("2_3dmea")
+script = ExtResource("3_i6npy")
+
+[node name="UI" parent="." instance=ExtResource("4_muyas")]

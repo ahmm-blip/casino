@@ -1,0 +1,98 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct1a5xs27b8b7"]
+
+[ext_resource type="Script" path="res://UI.cs" id="1_cgxgq"]
+
+[node name="UI" type="Node2D"]
+script = ExtResource("1_cgxgq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label-deposit" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 45.0
+offset_right = 909.0
+offset_bottom = 72.0
+scale = Vector2(1.3, 1.3)
+text = "Deposit ($)"
+
+[node name="TextEdit-deposit" type="TextEdit" parent="Control/Label-deposit"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -5.0
+offset_top = 27.0
+offset_right = 271.0
+offset_bottom = 64.0
+
+[node name="Label-spinfor" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 132.0
+offset_right = 807.0
+offset_bottom = 155.0
+scale = Vector2(1.3, 1.3)
+text = "Spin for ($)"
+
+[node name="TextEdit2-spin-for" type="TextEdit" parent="Control/Label-spinfor"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 27.0
+offset_right = 273.0
+offset_bottom = 61.0
+
+[node name="Button start" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 245.0
+offset_right = 853.0
+offset_bottom = 283.0
+text = "Start"
+
+[node name="Button restart" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 25.0
+offset_right = 117.0
+offset_bottom = 63.0
+text = "Restart"
+
+[node name="Button spin" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 147.0
+offset_right = 470.0
+offset_bottom = 185.0
+text = "Spin"
+
+[node name="Maskine hjælp" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 312.0
+offset_right = 904.0
+offset_bottom = 339.0
+scale = Vector2(1.3, 1.3)
+text = "Maskine hjælp"
+
+[node name="TextEdit-deposit" type="TextEdit" parent="Control/Maskine hjælp"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 27.0
+offset_right = 275.0
+offset_bottom = 107.0
+
+[node name="Sprite 2" type="Sprite2D" parent="."]
+position = Vector2(319, 398)
+
+[node name="Sprite 3" type="Sprite2D" parent="."]
+position = Vector2(440, 396)
+
+[node name="Sprite 1" type="Sprite2D" parent="."]
+position = Vector2(184, 400)
+
+[connection signal="pressed" from="Control/Button start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button restart" to="." method="_restartGame"]
+[connection signal="pressed" from="Control/Button spin" to="." method="_spin_that_shit"]
